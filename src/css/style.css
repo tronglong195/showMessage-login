@@ -1,0 +1,118 @@
+/* reset css */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  /* color: #f9ffff; */
+}
+body {
+  position: relative;
+}
+
+/* css variable */
+:root {
+  --red-color: red;
+  --blue-color: blue;
+}
+/* box show message */
+.container {
+  width: 60rem;
+  margin: 0 auto;
+  /* background-color: var(--red-color); */
+}
+
+.box {
+  margin: 20rem auto;
+  display: flex;
+  /* background: var(--blue-color); */
+  justify-content: space-around;
+}
+.box--btn,
+.box--btn:visited {
+  color: #ffffff;
+  width: 20rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  margin-left: 4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.box--btn:active {
+  transform: translateY(-5px);
+  color: blue;
+  opacity: 0.7;
+  outline: #776aca solid 5px;
+}
+
+.box--btn__red {
+  background-color: #dc3545;
+  color: #f9ffff;
+}
+
+.box--btn__bue {
+  color: #ffffff;
+  background-color: #007bff;
+}
+/* message default hide  */
+
+.message--ok {
+  display: none;
+  padding: 1rem 1rem;
+  position: fixed;
+  top: 5rem;
+  background-color: #a3e635;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  /* display: none;s */
+}
+
+.animation-right {
+  display: flex;
+  animation: right_left 0.5s ease-in-out forwards;
+  justify-content: space-around;
+}
+.message--ok__icon {
+  margin-right: 1rem;
+  color: #2a1ad4;
+  font-size: 2rem;
+}
+.message--ok__content {
+  margin-right: 1rem;
+  padding-top: 0.3rem;
+  font-size: 1.6rem;
+  color: #02010c;
+}
+
+.message--ok__close {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--red-color);
+}
+/* animation */
+
+@keyframes right_left {
+  0% {
+    opacity: 0;
+    right: -20rem;
+  }
+  100% {
+    opacity: 1;
+    right: 2rem;
+  }
+}
